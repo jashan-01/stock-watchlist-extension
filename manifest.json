@@ -6,7 +6,8 @@
   "permissions": ["storage", "https://api.apitube.io/*"],
   "host_permissions": [
     "https://www.alphavantage.co/*",
-    "https://api.apitube.io/*"
+    "https://api.apitube.io/*",
+    "https://api.openai.com/*"
   ],
   "action": {
     "default_popup": "popup.html",

@@ -10,6 +10,10 @@ body {
   width: 100%;
 }
 
+.hidden {
+  display: none !important;
+}
+
 h1 {
   font-size: 18px;
   margin: 0 0 16px 0;
@@ -106,17 +110,27 @@ input:focus {
   color: #666;
 }
 
-.remove-btn {
+.remove-btn,
+.gpt-btn {
   background: none;
   border: none;
   padding: 4px;
   cursor: pointer;
-  color: #dc3545;
-  opacity: 0.6;
   font-size: 18px;
 }
 
-.remove-btn:hover {
+.remove-btn {
+  color: #dc3545;
+  opacity: 0.6;
+}
+
+.gpt-btn {
+  color: #2196f3;
+  margin-left: 6px;
+}
+
+.remove-btn:hover,
+.gpt-btn:hover {
   opacity: 1;
 }
 
@@ -126,4 +140,97 @@ input:focus {
 
 .negative-change {
   color: #dc3545;
+}
+
+.screen {
+  transition: transform 0.3s ease;
+}
+
+
+#analysis-screen {
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 500px;
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #2196f3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.stock-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.analysis-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  padding: 0 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 14px;
+  color: #666;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gpt-btn {
+  color: #2196f3;
+  margin-left: 6px;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.gpt-btn.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
