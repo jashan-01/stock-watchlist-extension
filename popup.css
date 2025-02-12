@@ -4,10 +4,12 @@ body {
   padding: 16px;
   background-color: #ffffff;
   min-width: 300px;
+  max-height: 150px;
 }
 
 #app {
   width: 100%;
+  min-height: 300px;
 }
 
 .hidden {
@@ -51,7 +53,7 @@ input:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   margin-top: 4px;
-  max-height: 200px;
+  max-height: 150px;
   overflow-y: auto;
 }
 
@@ -97,6 +99,15 @@ input:focus {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex-grow: 1; /* Allow stock info to take available space */
+  min-width: 0; /* Ensures text can truncate if needed */
+}
+
+.stock-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Space between buttons */
+  margin-left: auto; /* Push buttons to the right */
 }
 
 .stock-symbol {
@@ -126,7 +137,6 @@ input:focus {
 
 .gpt-btn {
   color: #2196f3;
-  margin-left: 6px;
 }
 
 .remove-btn:hover,
