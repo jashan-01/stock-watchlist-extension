@@ -161,7 +161,7 @@ input:focus {
   background: white;
   width: 100%;
   box-sizing: border-box;
-  min-width: 300px;
+  min-width: 450px;
   min-height: 500px;
 }
 

@@ -3,7 +3,7 @@
   "name": "Stock Watchlist",
   "version": "1.0",
   "description": "Minimalistic stock watchlist with Alpha Vantage API.",
-  "permissions": ["storage", "https://api.apitube.io/*"],
+  "permissions": ["storage"],
   "host_permissions": [
     "https://www.alphavantage.co/*",
     "https://api.apitube.io/*",
